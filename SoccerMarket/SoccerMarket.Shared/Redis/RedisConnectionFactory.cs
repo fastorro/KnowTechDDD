@@ -15,6 +15,7 @@ namespace SoccerMarket.Shared.Redis
         {
             ConfigurationOptions options = new ConfigurationOptions();
             options.EndPoints.Add("localhost:6379");
+            options.AbortOnConnectFail = false;
 
             Connection = ConnectionMultiplexer.Connect(options);
         }
